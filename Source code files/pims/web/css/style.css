@@ -1,0 +1,518 @@
+/*
+ * List view
+*/
+
+.lsit-heading {
+    border-bottom: solid 1px #4297D7;
+    font-size:18px;    
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color: #3b59a3;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.list-actionbar {
+    padding-top: 6px;
+    padding-bottom: 1px;
+}
+
+a.lst-buttons {
+    clear:both;
+    display:block;
+    float:left;
+    padding:2px;
+    margin:0 5px 5px 0;
+    background:#f5f5f5;
+    border:1px solid #999999;
+    text-decoration:none;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    line-height:12px;
+    text-align:center;
+    color:#000066;
+    width:70px;
+    cursor:pointer;
+
+}
+
+.list-table-head {
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;   
+}
+
+.list-table-data {
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Forms
+*/
+
+.form-container {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    width:600px;
+    padding-bottom:14px;
+    border: solid 2px #b7ddf2;
+    background: #ebf4fb;
+}
+.form-heading {
+    border-bottom: solid 2px #b7ddf2;
+    padding-bottom: 3px;
+    padding-left:12px;
+    padding-top:5px
+}
+
+h1{
+    font-size:16px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color: #3b59a3;
+}
+
+h2{
+    font-size:14px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color: #3b59a3;
+}
+
+.form-area {
+    padding-left:12px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.messagebar {
+    padding-left:12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-input{
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 10px 10px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;    
+}
+
+.form-label {
+    display:block;
+    text-align:left;
+    width:140px;
+    float:left;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000066;
+}
+
+.form-actionbar {
+    margin-left:151px;
+    height:20px;
+    padding-bottom:10px;
+}
+
+a.form-button {
+    clear:both;
+    display:block;
+    float:left;
+    padding:2px;
+    margin:0 5px 5px 0;
+    background:#f5f5f5;
+    border:1px solid #999999;
+    text-decoration:none;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    line-height:12px;
+    text-align:center;
+    color:#000066;
+    width:65px;
+    cursor: pointer;
+}
+
+.image-button {
+    border:none;
+    float:left;
+}
+
+a.form-button:hover {
+    background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+    font-weight:bold;
+}
+
+.selectbox {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:10px;
+
+    padding: 2px;
+}
+input.formCheckboxWide {
+    display: block;
+    float: left;
+    margin: 10px 100px 0 0;
+}
+.td-link {
+    color:#000000;
+}
+
+.section1 {    
+    margin-top: 20px;
+    margin-left: 10px;
+    width:600px;
+    padding-bottom:14px;
+    border: solid 2px #b7ddf2;
+    background: #ebf4fb;
+}
+.section-area {
+    padding-left:12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.span-label {
+    display:block;
+    text-align:left;
+    width:140px;
+    float:left;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000066;
+
+}
+.span-data {
+
+    font-size:11px;
+    float:left;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.table-head {
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000066;
+}
+/*
+ * Errors and notice
+*/
+
+.flash_error {
+    color: red;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align: right;
+    margin-right: 30px;
+}
+.flash_notice {
+    color: #005500;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align: right;
+    margin-right: 30px;
+
+}
+label.error {
+    color: red;
+    font-size:11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.required {
+    color: red;
+}
+
+.normal-table {
+    width: 700px;
+    padding: 0;
+    margin: 0;
+}
+
+caption {
+    padding: 0 0 5px 0;
+    width: 700px;
+    font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+th.normal-list-head {
+    font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #4f6b72;
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    border-top: 1px solid #C1DAD7;
+    letter-spacing: 2px;    
+    text-align: left;
+    padding: 6px 6px 6px 12px;
+    background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.nobg {
+    border-top: 0;
+    border-left: 0;
+    border-right: 1px solid #C1DAD7;
+    background: none;
+}
+
+td.normal-lsit-data {
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    background: #fff;
+    padding: 6px 6px 6px 12px;
+    color: #4f6b72;
+    font-size:11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+td.alt {
+    background: #F5FAFA;
+    color: #797268;
+}
+
+th.spec {
+    border-left: 1px solid #C1DAD7;
+    border-top: 0;
+    background: #fff url(images/bullet1.gif) no-repeat;
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+    border-left: 1px solid #C1DAD7;
+    border-top: 0;
+    background: #f5fafa url(images/bullet2.gif) no-repeat;
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #797268;
+}
+
+/* Registration form fields
+*
+*/
+
+.reg-from-label {
+    display:block;
+    text-align:left;
+    width:140px;    
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000066;
+}
+
+.reg-form-input{
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 10px 10px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.STD-div {
+    border: 1px solid #C1DAD7;
+    width: 680px;
+    background: #fff;
+    padding: 6px 6px 6px 12px;
+    color: #4f6b72;
+    font-size:11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+
+}
+
+select {
+    border:solid 1px #aacfe4;
+    font-size: 11px;
+    background-color: #ffffff;
+    padding-left: 0px;
+}
+
+input:not([type=image]) {
+    border:solid 1px #aacfe4;
+    font-size: 11px;
+    background-color: #ffffff;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+textarea {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    border:solid 1px #aacfe4;
+    font-size: 12px;
+    background-color: #ffffff;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.checkbox,.radio {
+    border:0px;
+    background-color: transparent;
+    margin: 0px;
+    vertical-align: bottom;
+}
+.div-tabs {
+    width: 600px;
+    margin-top: 8px;
+}
+
+.report-table {
+
+    font: verdana, Arial, Helvetica, sans-serif;
+    color: #000;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #666666;
+    margin-left: 60px;
+    font-size: 11px;
+    
+}
+.rep-head {
+	background-color: #3d7de5;
+}
+table-caption {
+    height: 45px;
+    line-height: 44px;
+    color: #60634E;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: -1px;
+    background: #ffffff url(captop.jpg) repeat-x;
+    background-position: 50% top;
+    border-left: 2px solid #616161;
+    border-right: 2px solid #616161;
+}
+
+report-th {
+    font-size: 105%;
+    color: #000;
+    background: #ffffff url(tbar.gif) repeat-x;
+    height: 25px;
+}
+
+
+.report-odd {
+    background-color: #ebf3ff;
+}
+
+.report-th {
+    font-size: 12px;;
+    color: #000;
+    background: #ffffff url(tbar.gif) repeat-x;
+    background-color: #3d7de5;
+    height: 25px;
+}
+
+.report-header-img {
+   	background: #ffffff url(/images/nscp1.jpg) no-repeat;
+
+}
+
+.report-div {
+
+    border:solid 1px #aacfe4;
+    margin: 30px;
+    padding: 20px;
+}
+
+.report-header-text-sec1 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+.report-header-text {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+.report-hr {
+    border:solid 1px #aacfe4;
+}
+
+#btnSave {
+    width: 65px;
+    height: 25px;
+}
+#btnClear {
+    width: 65px;
+    height: 25px;
+}
+#btnBack{
+    width: 65px;
+    height: 25px;
+}
+
+#btnAddNew{
+    width: 75px;
+    height: 25px;
+}
+#btnOpenDialog{
+    width: 65px;
+    height: 25px;
+}
+#btnAssign{
+    height: 25px
+}
+#btnReset{
+    width: 85px;
+    height: 25px;
+}
+#btnSearch{
+    width: 65px;
+    height: 25px;
+}
+#btnAddNewPatient{
+    width: 95px;
+    height: 25px;
+}
+#btnAddNewPatient{
+    height: 25px
+}
+#btnVisit{
+    height: 25px
+}
+#btnPrint{
+    width: 65px;
+    height: 25px;
+}
+#btnExport-PDF{
+    width: 95px;
+    height: 25px;
+}
+
+#btnExport-CSV{
+    width: 95px;
+    height: 25px;
+}
+
+#btnShow{
+    width: 65px;
+    height: 25px;
+}
+
+#login {
+    border:solid 1px #4297D7;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -265px;
+    margin-top: -160px;
+    height: 230px;
+
+}
+.login-img {
+    margin-left: 170px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.login-form {
+    margin-left: 50px;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.tr-even { background-color:#ffffff; }
+.tr-odd { background-color:#e0ebff;}

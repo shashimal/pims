@@ -1,0 +1,907 @@
+ClinicReason:
+  connection: doctrine
+  tableName: clinic_reason
+  columns:
+    patient_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    episode_no:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    gp:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    court:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    bb:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    contact:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    cf:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    volantary:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    opd:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ward:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    other:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Patient:
+      local: patient_no
+      foreign: patient_no
+      type: one
+    Episode:
+      local: episode_no
+      foreign: episode_no
+      type: one
+ContactMode:
+  connection: doctrine
+  tableName: contact_mode
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    patient_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    email:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    letter:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    telephone:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    visit:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    no_contact:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Patient:
+      local: patient_no
+      foreign: patient_no
+      type: one
+Episode:
+  connection: doctrine
+  tableName: episode
+  columns:
+    episode_no:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    patient_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    status:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0'
+      notnull: true
+      autoincrement: false
+    comment:
+      type: string(60)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    start_date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    end_date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    std_positive:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    hiv_positive:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Patient:
+      local: patient_no
+      foreign: patient_no
+      type: one
+    ClinicReason:
+      local: episode_no
+      foreign: episode_no
+      type: many
+    Visit:
+      local: episode_no
+      foreign: episode_no
+      type: many
+Patient:
+  connection: doctrine
+  tableName: patient
+  columns:
+    patient_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    registered_date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    first_name:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    last_name:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    current_address:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    permanent_address:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    contact_address:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    telephone1:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    telephone2:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    mobile:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    email:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nic_pp_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    date_of_birth:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    sex:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    marital_status:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nationality:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    education:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    occupation:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    category:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    deleted:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    comment:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    ClinicReason:
+      local: patient_no
+      foreign: patient_no
+      type: many
+    ContactMode:
+      local: patient_no
+      foreign: patient_no
+      type: many
+    Episode:
+      local: patient_no
+      foreign: patient_no
+      type: many
+    StdResult:
+      local: patient_no
+      foreign: patient_no
+      type: many
+    TraceContact:
+      local: patient_no
+      foreign: patient_no
+      type: many
+    Visit:
+      local: patient_no
+      foreign: patient_no
+      type: many
+PatientCategory:
+  connection: doctrine
+  tableName: patient_category
+  columns:
+    category_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    patient_category:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+PatientNoTracker:
+  connection: doctrine
+  tableName: patient_no_tracker
+  columns:
+    year:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    male:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    female:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Report:
+  connection: doctrine
+  tableName: report
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Rights:
+  connection: doctrine
+  tableName: rights
+  columns:
+    user_group_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    module_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    adding:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    editing:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    deleting:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    viewing:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    UserGroup:
+      local: user_group_id
+      foreign: user_group_id
+      type: one
+    SysModule:
+      local: module_id
+      foreign: module_id
+      type: one
+StdInput:
+  connection: doctrine
+  tableName: std_input
+  columns:
+    input_code:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    input_name:
+      type: string(60)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_description:
+      type: string(60)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    no_of_input:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    sex:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_category_code:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    StdInputCategory:
+      local: input_category_code
+      foreign: input_category_code
+      type: one
+    StdInputResult:
+      local: input_code
+      foreign: input_code
+      type: many
+    StdResult:
+      local: input_code
+      foreign: input_code
+      type: many
+StdInputCategory:
+  connection: doctrine
+  tableName: std_input_category
+  columns:
+    input_category_code:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    StdInput:
+      local: input_category_code
+      foreign: input_category_code
+      type: many
+StdInputResult:
+  connection: doctrine
+  tableName: std_input_result
+  columns:
+    input_result_code:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    result_description:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_code:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    StdInput:
+      local: input_code
+      foreign: input_code
+      type: one
+    StdResult:
+      local: input_result_code
+      foreign: result_code
+      type: many
+StdResult:
+  connection: doctrine
+  tableName: std_result
+  columns:
+    patient_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    episode_no:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    input_code:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    result_code:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    input_category_code:
+      type: string(10)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    StdInput:
+      local: input_code
+      foreign: input_code
+      type: one
+    StdInputResult:
+      local: result_code
+      foreign: input_result_code
+      type: one
+    Patient:
+      local: patient_no
+      foreign: patient_no
+      type: one
+SysModule:
+  connection: doctrine
+  tableName: sys_module
+  columns:
+    module_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Rights:
+      local: module_id
+      foreign: module_id
+      type: many
+TraceContact:
+  connection: doctrine
+  tableName: trace_contact
+  columns:
+    patient_no:
+      type: string(40)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    slip_no:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    contact_details:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Patient:
+      local: patient_no
+      foreign: patient_no
+      type: one
+Uniqueid:
+  connection: doctrine
+  tableName: uniqueid
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    last_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    tbl:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    tbl_column:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+User:
+  connection: doctrine
+  tableName: user
+  columns:
+    user_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    user_name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_password:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    is_admin:
+      type: string(3)
+      fixed: true
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    status:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_group_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    UserGroup:
+      local: user_group_id
+      foreign: user_group_id
+      type: one
+UserGroup:
+  connection: doctrine
+  tableName: user_group
+  columns:
+    user_group_id:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    user_group_name:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string(60)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Rights:
+      local: user_group_id
+      foreign: user_group_id
+      type: many
+    User:
+      local: user_group_id
+      foreign: user_group_id
+      type: many
+Visit:
+  connection: doctrine
+  tableName: visit
+  columns:
+    patient_no:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    episode_no:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    visit_no:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    appointed_date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    visited_date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    next_visit_date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Patient:
+      local: patient_no
+      foreign: patient_no
+      type: one
+    Episode:
+      local: episode_no
+      foreign: episode_no
+      type: one

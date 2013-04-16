@@ -1,0 +1,23 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  #stylesheets:    [style.css, IE6_style.css, IE_style.css. octopus.css ]
+
+  #avascripts:    [style.js, jquery.js, jquery.validate.min.js, jquery-ui.js]
+  stylesheets:    [style.css, demo_page.css,demo_table_jui.css, custom-theme0/jquery-ui-1.8.2.custom.css]
+
+  javascripts:    [ jquery.js, jquery.validate.min.js, jquery-ui.js,jquery.dataTables.js,jquery-ui-1.8.2.custom.min.js,jquery.corner.js,jquery.datePicker.js]
+
+  has_layout:     true
+  layout:         layout

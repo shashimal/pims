@@ -1,0 +1,61 @@
+Installation of the System
+=======================================
+Installation process consists the following steps. 
+
+1.Web and database servers installation 
+2.Application installation
+3.System configuration
+
+1. Web and Database Servers Installation 
+==========================================
+
+XAMPP has been selected for installing the Apache, MySQL and PHP packages.  XAMPP is bundled with Apache, MySQL, and PHP packages which are used to run the application. 
+
+Install XAMPP in Windows
+
+1.Insert Patient Information Management System (PIMS) CD into the CD ROM.
+2.Open the directory called Install.
+3.Run the file xampp-win32-1.7.3.exe to install the web, database servers and the PHP .
+4.Open the XAMPP control panel which is in the installed directory of the XAMPP. (i:e C:/ xampp / xampp-control)
+5.If the Apache and MySQL servers are not started , click on the Start button to start those services .  Following figures show the Start and  Stop statuses of the Apache and MySQL servers.
+
+Install LAMPP in Linux 
+
+
+1.Insert Patient Information Management System (PIMS) CD into the CD ROM.
+2.Open the Install directory and copy the xampp-linux-1.7.3a.tar to a location in the file system. (Note: Copying location should be have Read, Write, Executable permissions )
+3.Extract the xampp-linux-1.7.3a.tar 
+4.The web directory htdocs is included in the /lampp directory.
+5.Start the services by using the following command.
+/opt/lampp/lampp start (Note: Here opt is the directory where lampp is located)
+	
+If the services got started , following messages are displayed 
+
+Starting XAMPP 1.7.3a...
+LAMPP: Starting Apache...
+LAMPP: Starting MySQL...
+LAMPP started.
+Ready. Apache and MySQL are running.
+
+
+
+2. Application Instillation
+==========================================
+
+1.Open the directory called System which is in the CD.
+2.Copy the pims.zip or pims.tar.gz file into the web directory of the XAMPP. The web directory htdocs is located in the /xampp/ directory. (Note: In Linux /lamp)
+3.Extract the copied file.
+4.If the application environment is Linux , necessary read write and executable  permissions should be set to the application directory . For example,
+
+chown -R apache.apache pims
+chmod -R 755 pims
+	
+
+
+3. System Configuration 
+==========================================
+
+1.Log in to the MySQL server and create a database with the name pims .
+2.Select the created database and import the dbscript.sql file which is in the Data directory of the CD.
+3.Login to the system by using default admin accounts credentials.
+4.Following figures explain the database system configuration process.
